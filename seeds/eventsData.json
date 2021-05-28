@@ -1,0 +1,27 @@
+[
+  {
+    "date": 531,
+    "title": "Group Show: Day Trip",
+    "locationName": "Reynolds Gallery",
+    "locationAddress": "1514 West Main Street",
+    "time": 430
+
+  },
+  {
+    "date": 531,
+    "title": "Casey Criddle: Life Pursuits",
+    "locationName": "Eden Airlines",
+    "locationAddress": "214 East Grace Street",
+    "time": 430
+
+  },
+  {
+    "date": 531,
+    "title": "Group Show: The Dirty South - Contemporary Art, Material Culture, and the Sonic Impulse",
+    "locationName": "Virginia Museum of Fine Art",
+    "locationAddress": "200 North Arthur Ashe Boulevard",
+    "time": 430
+
+  }
+
+]
