@@ -28,6 +28,10 @@ Event.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         time: {
             type: DataTypes.TIME,
             defaultValue: DataTypes.NOW,
