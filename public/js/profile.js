@@ -1,7 +1,12 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
+<<<<<<< HEAD
   const email = document.querySelector('#project-name').value.trim();
+=======
+  const name = document.querySelector('#event-name').value.trim();
+  const needed_funding = document.querySelector('#project-funding').value.trim();
+>>>>>>> 7b06402565e188751a45755d1ab2ca83f7ff61f3
   const description = document.querySelector('#project-desc').value.trim();
 
   if (email && password) {
