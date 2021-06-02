@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Event, User } = require('../models');
+const { Events, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
     // Get all projects and JOIN with user data(MAY NEED TO CHANGE)
-    const eventData = await Event.findAll({
+    const eventData = await Events.findAll({
       include: [
         {
           model: User,
@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 
 router.get('/event/:id', async (req, res) => {
   try {
-    const eventData = await Event.findByPk(req.params.id, {
+    const eventData = await Events.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -55,13 +55,14 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Event }],
+      include: [{ model: Events }],
     });
+    console.log("req.session.user_id" , req.session.user_id);
 
     const user = userData.get({ plain: true });
 
     res.render('profile', {
-      ...user,
+      // ...user,
       logged_in: true
     });
   } catch (err) {
