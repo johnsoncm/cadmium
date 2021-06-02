@@ -3,14 +3,20 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
-      <a href="/event/{{event.id}}">{{event.name}}</a>
+      <a href="/event/{{events.id}}">{{events.title}}</a>
     </h2>
-    <p>Added by {{event.user.name}} on {{format_date event.date_created}}</p>
+    <h3>
+      Date: {{format_date events.date}}
+      Time: {{events.time}}
+      Venue: {{events.locationName}}
+      Address: {{events.locationAddress}}
+    </h3>
   </div>
   <div class="col-md-7">
     <p>
-      {{event.description}}
+      {{events.description}}
     </p>
+    <p>Special thanks to {{events.user.username}} for adding this event!</p>
   </div>
 </div>
 {{/each}}
