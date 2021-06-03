@@ -5,9 +5,10 @@
     <h2>
       <!-- Call helper function with triple brackets to render the emoji span as HTML -->
       {{{get_emoji}}}
-      <a href="/event/{{event.id}}">{{event.name}}</a>
+      <a href="/event/{{event.id}}">{{event.title}}</a>
     </h2>
-    <p>Added by {{event.user.name}} on {{format_date event.date_created}}</p>
+    {{!-- {{format_date event.date_created}} --}}
+    <p>Added by {{event.user_id}} on {{event.time}}</p>
   </div>
   <div class="col-md-7">
     <p>

@@ -7,6 +7,7 @@ router.get('/', withAuth, async (req, res) => {
   try {
     const eventData = await Event.findAll(req.body)
     res.status(200).json(eventData);
+    console.log(eventData);
   } catch (err) {
     res.status(500).json(err);
   }
