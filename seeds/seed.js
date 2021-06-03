@@ -1,20 +1,21 @@
 const sequelize = require('../config/connection');
-const { User, Project } = require('../models');
+const { User, Events } = require('../models');
 
 const userData = require('./userData.json');
-const projectData = require('./projectData.json');
+const eventsData = require('./eventsData.json');
 
 const seedDatabase = async () => {
-  await sequelize.sync({ force: true });
+  await sequelize.sync({ force: false });
 
   const users = await User.bulkCreate(userData, {
     individualHooks: true,
     returning: true,
   });
 
-  for (const project of projectData) {
-    await Project.create({
-      ...project,
+  // revisit - Scott said this is just assigning a random user to each event??
+  for (const event of eventsData) {
+    await Events.create({
+      ...event,
       user_id: users[Math.floor(Math.random() * users.length)].id,
     });
   }

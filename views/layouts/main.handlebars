@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <title>Art Events in Richmond, VA!</title>
+  <link rel="stylesheet" href="iziToast.min.css"> 
+  {{!-- We're not using jass.css, are we? --}}
+  {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -13,32 +15,35 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Fund My Project!</a>
+        <a href="/">Login to Save and Add Events</a>
       </h1>
       <nav>
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/profile">Profile</a>
+        <a href="/homepage">Homepage</a>
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
+      <!-- Render the sub layout - this is where all the other handlebars templates will go -->
       {{{ body }}}
     </main>
     <footer>
-      
+      <p>Cadmium <i class="fas fa-copyright"></i> 2021</p>
     </footer>
   </div>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
+  {{!-- should there be an else statement for signup too? --}}
   {{/if}}
+ <script src=".js/iziToast.min.js" type="text/javascript"></script>
+
 </body>
 
 </html>

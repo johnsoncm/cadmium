@@ -12,7 +12,7 @@ Events.init(
             autoIncrement: true,
         },
         date: {
-            type: DataTypes.DATE,
+            type: DataTypes.DATEONLY,
             allowNull: false,
             defaultValue: DataTypes.NOW,
         },
@@ -25,6 +25,10 @@ Events.init(
             allowNull: false,
         },
         locationAddress: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        description: {
             type: DataTypes.STRING,
             allowNull: false,
         },
