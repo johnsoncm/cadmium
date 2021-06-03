@@ -21,8 +21,16 @@
       <div class="form-group">
         <button class="btn btn-primary"id="login-btn" type="submit">login</button>
       </div>
+  
     </form>
-
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a> You should only see this if you're logged in on the login page, which should not happen lol. </a>
+        {{else}}
+        <a href="/signup">Signup</a>
+        {{/if}}
+      </nav>
                 </div>
             </div>
             <div class="bg-blue py-4">

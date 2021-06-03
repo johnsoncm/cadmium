@@ -20,7 +20,7 @@ const signupForm = async (event) => {
             console.log('Account successfully created!');
 
 
-            document.location.replace('/dashboard');
+            document.location.replace('/homepage');
 
         } else {
             alert(response.statusText);
