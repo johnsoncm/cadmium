@@ -1,18 +1,24 @@
 <!-- Loop over each object in the events array - currently showing the projects array from mini-project - need to change to reflect what we want-->
+<h2>Check out these upcoming Richmond Art Events!</h2>
+{{!-- maybe make these cards? --}}
 {{#each events as |event| }}
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
-      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-      {{{get_emoji}}}
-      <a href="/event/{{event.id}}">{{event.name}}</a>
+      <a href="/event/{{events.id}}">{{events.title}}</a>
     </h2>
-    <p>Added by {{event.user.name}} on {{format_date event.date_created}}</p>
+    <h3>
+      Date: {{format_date events.date}}
+      Time: {{events.time}}
+      Venue: {{events.locationName}}
+      Address: {{events.locationAddress}}
+    </h3>
   </div>
   <div class="col-md-7">
     <p>
-      {{event.description}}
+      {{events.description}}
     </p>
+    <p>Special thanks to {{events.user.username}} for adding this event!</p>
   </div>
 </div>
 {{/each}}
