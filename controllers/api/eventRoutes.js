@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Events } = require('../../models/Events');
+const {Events}  = require('../../models');
 const withAuth = require('../../utils/auth');
 
-//This is getting all of the events
-router.get('/', withAuth, async (req, res) => {
+//This is getting all of the events withAuth,
+router.get('/',  async (req, res) => {
   try {
-    const eventData = await Event.findAll(req.body)
+    const eventData = await Events.findAll(req.body)
     res.status(200).json(eventData);
     console.log(eventData);
   } catch (err) {
@@ -17,7 +17,7 @@ router.get('/', withAuth, async (req, res) => {
 //This is getting events based on their ID.
 router.get('/:id', withAuth, async (req, res) => {
   try {
-    const eventData = await Event.findbyPk(req.body)
+    const eventData = await Events.findbyPk(req.body)
     res.status(200).json(eventData);
   } catch (err) {
     res.status(500).json(err);
@@ -26,17 +26,20 @@ router.get('/:id', withAuth, async (req, res) => {
 
 
 
-// This is posting a new event. We may have to edit the req.body portion.
-router.post('/', withAuth, async (req, res) => {
+// This is posting a new event. We may have to edit the req.body portion. withAuth,
+router.post('/',  async (req, res) => {
+  console.log('is this working', req.body);
   try {
-    const newEvent = await Event.create({
+    const newEvent = await Events.create({
       ...req.body,
-      user_id: req.session.user_id,
+      // user_id: req.session.user_id,
     });
+    console.log('event', newEvent);
 
     res.status(200).json(newEvent);
   } catch (err) {
     res.status(400).json(err);
+    console.log('error', err);
   }
 });
 
@@ -45,7 +48,7 @@ router.put('/:id', async (req, res) => {
   try {
     console.log(`Changing Event Name To.. ${req.body.category_name} `)
   
-    const eventData = await   Event.update(
+    const eventData = await   Events.update(
       { category_name: req.body.category_name },
       { returning: true, where: {id: req.params.id} }
     )
@@ -61,7 +64,7 @@ router.put('/:id', async (req, res) => {
 //This is deleting an event by an ID.
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const eventData = await Event.destroy({
+    const eventData = await Events.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id,
