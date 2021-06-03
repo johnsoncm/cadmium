@@ -3,7 +3,7 @@
             <div class="row d-flex">
                 <div class="col-lg-6">
                     <div class="card1 pb-5">
-                        <div class="row"> <img src="https://i.imgur.com/CXQmsmF.png" class="logo"> </div>
+                        <div class="row"> <img src="./images/cadmium.png" width="600px" height="600px" class="logo"> </div>
                         <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://i.imgur.com/uNGdWHi.png" class="image"> </div>
                     </div>
                 </div>
@@ -21,8 +21,16 @@
       <div class="form-group">
         <button class="btn btn-primary"id="login-btn" type="submit">login</button>
       </div>
+  
     </form>
-
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+        <a> You should only see this if you're logged in on the login page, which should not happen lol. </a>
+        {{else}}
+        <a href="/signup">Signup</a>
+        {{/if}}
+      </nav>
                 </div>
             </div>
             <div class="bg-blue py-4">

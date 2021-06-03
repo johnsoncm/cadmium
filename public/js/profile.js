@@ -2,16 +2,13 @@ const newFormHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#event-name').value.trim();
-  const date = document.querySelector('#date').value.trim();
-  const time = document.querySelector('#time').value.trim();
-  const venue = document.querySelector('#venue').value.trim();
-  const address = document.querySelector('#venue-address').value.trim();
-  const description = document.querySelector('#event-description').value.trim();
+  const needed_funding = document.querySelector('#project-funding').value.trim();
+  const description = document.querySelector('#project-desc').value.trim();
 
-  if (name && date && time && venue && address && description) {
-    const response = await fetch(`/api/events`, {
+  if (name && description) {
+    const response = await fetch(`/api/profile`, {
       method: 'POST',
-      body: JSON.stringify({ name, date, time, venue, address, description }),
+      body: JSON.stringify({ name, }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -20,7 +17,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Error: Failed to create new event');
+      alert('Failed to create profile');
     }
   }
 };
@@ -29,22 +26,22 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/events/${id}`, {
+    const response = await fetch(`/api/profile/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Error: Failed to delete event');
+      alert('Failed to delete profile');
     }
   }
 };
 
 document
-  .querySelector('.new-event-form')
-  .addEventListener('click', newFormHandler);
+  .querySelector('.new-project-form')
+  .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.event-list')
+  .querySelector('.project-list')
   .addEventListener('click', delButtonHandler);
