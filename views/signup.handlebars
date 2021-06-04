@@ -1,5 +1,5 @@
 <div class="column">
-<h2 class="title pb-4">Create A New Account Here!</h2><hr>
+<h2 class="title pb-4">Create a New Account Here!</h2><hr>
 <form class="signup-form">
   <div>
     <label for="username-signup">Username:</label>
@@ -11,8 +11,13 @@
   </div>
   <div>
     <label for="password-signup">Password:</label>
+    <p>Must be at least 8 characters</p>
     <input type="password" id="password-signup" />
   </div>
+  {{!-- <div>    
+    <label for="password-signup">Confirm Password:</label>
+    <input type="password" id="confirm-password-signup"/>
+  </div> --}}
   <div>
     <button type="submit" class="button is-primary">Sign up!</button>
   </div>
