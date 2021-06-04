@@ -23,30 +23,19 @@
 </div>
 {{/each}}
 
-
+{{#each events as |event| }}
 <div class="container">
   
   <div class="card-media">
     <!-- media container -->
     <div class="card-media-object-container">
       <div class="card-media-object" style="background-image: url(https://s9.postimg.cc/y0sfm95gv/prince_f.jpg);"></div>
-      <span class="card-media-object-tag subtle">Selling Fast</span>
-      <ul class="card-media-object-social-list">
-        <li>
-          <img src="https://s10.postimg.cc/3rjjbzcvd/profile_f.jpg" class="">
-        </li>
-        <li>
-          <img src="https://s16.postimg.cc/b0j0djh79/profile_0_f.jpg" class="">
-        </li>
-        <li class="card-media-object-social-list-item-additional">
-          <span>+2</span>
-        </li>
-      </ul>
+
     </div>
     <!-- body container -->
     <div class="card-media-body">
       <div class="card-media-body-top">
-        <span class="subtle">Mon, APR 09, 7:00 PM</span>
+        <span class="subtle">Date: {{format_date event.date}}<br>{{event.time}}</span>
         <div class="card-media-body-top-icons u-float-right">
           <svg fill="#888888" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 0h24v24H0z" fill="none"/>
@@ -57,19 +46,27 @@
             <path d="M0 0h24v24H0z" fill="none"/>
           </svg>
         </div>
+
+
       </div>
-      <span class="card-media-body-heading">This Thing Called Life: A Celebration of Prince and His Legacy at MEZZANINE SF</span>
+      <span class="card-media-body-heading">{{event.title}}</span>
       <div class="card-media-body-supporting-bottom">
-        <span class="card-media-body-supporting-bottom-text subtle">Mezzanine, San Francisco, CA</span>
-        <span class="card-media-body-supporting-bottom-text subtle u-float-right">Free &ndash; $30</span>
+        <span class="card-media-body-supporting-bottom-text subtle">{{event.locationName}}</span>
+        <span class="card-media-body-supporting-bottom-text subtle u-float-right">{{event.locationAddress}}</span>
       </div>
       <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
         <span class="card-media-body-supporting-bottom-text subtle">#Music #Party</span>
-        <a href="#/" class="card-media-body-supporting-bottom-text card-media-link u-float-right">VIEW TICKETS</a>
+        <a href="#/" class="card-media-body-supporting-bottom-text card-media-link u-float-right">{{event.description}}</a>
       </div>
     </div>
   </div>
-  
+  {{/each}}
+
+
+
+
+{{!-- This card below just shows a second picture, and other stuff. --}}
+
   <div class="card-media">
     <!-- media container -->
     <div class="card-media-object-container">
