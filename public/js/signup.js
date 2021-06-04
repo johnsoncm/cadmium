@@ -18,14 +18,15 @@ const signupForm = async (event) => {
         });
         if (response.ok) {
             console.log('Account successfully created!');
-
-
+            // If successful, redirect browser to user homepage
             document.location.replace('/homepage');
+            // or should it be '/'???
 
         } else {
-            alert(response.statusText);
+            // alert(response.statusText);
+            alert('Please enter a valid username, email, and password');
         }
     }
 }
-document.querySelector('.signup-form').addEventListener('submit', signupForm);
+document.querySelector('.signup-form').addEventListener('click', signupForm);
 // document.querySelector('#signup-form').addEventListener('submit', signupForm);
