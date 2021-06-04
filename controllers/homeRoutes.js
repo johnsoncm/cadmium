@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
     // const projects = eventData.map((event) => event.get({ plain: true }));
 
     // Pass serialized data and session flag into template
-    res.render('login', { 
+    res.render('landingPage', { 
       // projects, 
       logged_in: req.session.logged_in 
     });
