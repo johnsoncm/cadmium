@@ -1,14 +1,27 @@
-const newFormHandler = async (event) => {
+const addEventHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#event-name').value.trim();
-  const needed_funding = document.querySelector('#project-funding').value.trim();
-  const description = document.querySelector('#project-desc').value.trim();
+  const date = document.querySelector('#date').value.trim();
+  const time = document.querySelector('#time').value.trim();
+  const venue = document.querySelector('#venue').value.trim();
+  const venueAddress = document.querySelector('#venue-address').value.trim();
+  const description = document.querySelector('#event-description').value.trim();
+  const img = document.querySelector('#img').value.trim();
 
-  if (name && description) {
+// This isn't quite right - need to account for default img if user does not have one
+  if (name && date && time && venue && venueAddress && description && img) {
     const response = await fetch(`/api/profile`, {
       method: 'POST',
-      body: JSON.stringify({ name, }),
+      body: JSON.stringify({ 
+        name, 
+        date,
+        time,
+        venue,
+        venueAddress,
+        description,
+        img
+      }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -39,9 +52,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-project-form')
-  .addEventListener('submit', newFormHandler);
+  .querySelector('.new-event-form')
+  .addEventListener('submit', addEventHandler);
 
 document
-  .querySelector('.project-list')
+  .querySelector('.event-list')
   .addEventListener('click', delButtonHandler);
