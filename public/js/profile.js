@@ -35,6 +35,14 @@ const addEventHandler = async (event) => {
   }
 };
 
+// Datepicker widget
+$(function () {
+  $('#datepicker').datepicker({
+    changeMonth: true,
+    changeYear: true,
+  });
+});
+
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
@@ -50,6 +58,8 @@ const delButtonHandler = async (event) => {
     }
   }
 };
+
+
 
 document
   .querySelector('.new-event-form')
