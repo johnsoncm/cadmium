@@ -10,6 +10,8 @@
   {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/eventCard.css">
+
 </head>
 
 <body>
@@ -26,7 +28,6 @@
         <button class="no-button" id="logout">Logout</button>
         {{else}}
         <a href="/login">Login</a>
-        {{!-- or Signup - but still take to login page??--}}
         {{/if}}
       </nav>
     </header>
@@ -42,7 +43,6 @@
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
-  {{!-- should there be an else statement for signup too? --}}
   {{/if}}
  <script src=".js/iziToast.min.js" type="text/javascript"></script>
 
