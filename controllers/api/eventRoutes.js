@@ -26,8 +26,8 @@ router.get('/:id', withAuth, async (req, res) => {
 
 
 
-// This is posting a new event. We may have to edit the req.body portion. withAuth,
-router.post('/',  async (req, res) => {
+// This is posting a new event. We may have to edit the req.body portion. 
+router.post('/', withAuth, async (req, res) => {
   console.log('is this working', req.body);
   try {
     const newEvent = await Events.create({
