@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS cadmium;
+CREATE DATABASE cadmium;

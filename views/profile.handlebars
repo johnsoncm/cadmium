@@ -1,0 +1,59 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{username}}!</h2>
+  </div>
+</div>
+​
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Found a new art event? Share that information here so others can learn about it too!</h3>
+​
+    <form class="form new-event-form">
+      <div class="form-group">
+        <label for="event-name">Event Name:</label>
+        <input class="form-input" type="text" id="event-name" name="event-name" />
+      </div>
+      <div class="form-group">
+        <label for="date">Date:</label>
+        <input class="form-input" type="number" id="date" name="date" />
+      </div>
+      <div class="form-group">
+        <label for="time">Time:</label>
+        <input class="form-input" type="number" id="time" name="time" />
+      </div>
+      <div class="form-group">
+        <label for="venue">Venue:</label>
+        <input class="form-input" type="text" id="venue" name="venue" />
+      </div>
+      <div class="form-group">
+        <label for="venue-address">Venue Address:</label>
+        <input class="form-input" type="text" id="venue-address" name="venue-address" />
+      </div>
+      <div class="form-group">
+        <label for="event-description">Description:</label>
+        <textarea class="form-input" type="text" id="event-description" name="event-description"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+    </form>
+  </div>
+​
+  {{#if events.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Events:</h3>
+    {{#each event as |event|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/events/{{event.id}}">{{event.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{event.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+​
+<script src="./js/profile.js"></script>
