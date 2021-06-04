@@ -20,10 +20,10 @@ body {
 }
 
 .logo {
-    width: 200px;
-    height: 200px;
+    width: 230px;
+    height: 230px;
     margin-top: 20px;
-    margin-left: 35px
+    margin-left: 200px
 }
 
 .image {
@@ -154,7 +154,11 @@ button:focus {
 body {
   background-image: url("https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0JTIwZ2FsbGVyeXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80");
   background-color: #cccccc;
+  background-size: cover; 
+
  }
  
 
- 
+ a href {
+
+ }
