@@ -1,8 +1,17 @@
 module.exports = {
   format_date: (date) => {
     // Format date as MM/DD/YYYY
-    return date.toLocaleDateString();
+    let output;
+    try{
+      output = date.toLocaleDateString()
+    }
+    catch (e) {
+      output = date
+    }
+    return output;
+
   }
+  //catch block to return data given if not
 
   // Could do something along these lines but for the type of venue maybe? Down the line. Definitely not a priority now
 

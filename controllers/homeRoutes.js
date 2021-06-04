@@ -42,10 +42,12 @@ router.get('/homepage', async (req, res) => {
     // Serialize data so the template can read it
     const events = eventData.map((event) => event.get({ plain: true }));
     // Pass serialized data and session flag into template
+    console.log("events", events);
     res.render('homepage', {
-      ...events,
+      events,
       logged_in: req.session.logged_in
     });
+    
   } catch (err) {
     res.status(500).json(err);
   }
