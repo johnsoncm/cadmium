@@ -26,6 +26,7 @@ const signupForm = async (event) => {
             // alert(response.statusText);
             alert('Please enter a valid username, email, and password');
         }
+        // add try catch - for creating error
     }
 }
 document.querySelector('.signup-form').addEventListener('click', signupForm);
