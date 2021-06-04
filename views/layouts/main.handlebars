@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="iziToast.min.css"> 
   {{!-- We're not using jass.css, are we? --}}
   {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/eventCard.css">
 
@@ -26,7 +27,7 @@
         <a href="/homepage">Homepage</a>
         <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="/login"></a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
@@ -34,10 +35,10 @@
       <!-- Render the sub layout - this is where all the other handlebars templates will go -->
       {{{ body }}}
     </main>
-    <footer>
-      <p>Cadmium <i class="fas fa-copyright"></i> 2021</p>
-    </footer>
   </div>
+  <footer>
+      <p><i class="fa fa-copyright"></i>2021 Cadmium </p>
+  </footer>
 
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
