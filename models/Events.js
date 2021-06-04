@@ -36,6 +36,10 @@ Events.init(
             type: DataTypes.TIME,
             defaultValue: DataTypes.NOW,
         },
+        img: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
   },
   {
     sequelize,
