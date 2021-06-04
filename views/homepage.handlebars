@@ -5,20 +5,20 @@
 <div class="row mb-4 project">
   <div class="col-md-5">
     <h2>
-      <a href="/event/{{events.id}}">{{events.title}}</a>
+      <a href="/event/{{event.id}}">{{event.title}}</a>
     </h2>
     <h3>
-      Date: {{format_date events.date}}
-      Time: {{events.time}}
-      Venue: {{events.locationName}}
-      Address: {{events.locationAddress}}
+      Date: {{format_date event.date}}
+      Time: {{event.time}}
+      Venue: {{event.locationName}}
+      Address: {{event.locationAddress}}
     </h3>
   </div>
   <div class="col-md-7">
     <p>
-      {{events.description}}
+      {{event.description}}
     </p>
-    <p>Special thanks to {{events.user.username}} for adding this event!</p>
+    <p>Special thanks to {{event.user.username}} for adding this event!</p>
   </div>
 </div>
 {{/each}}
