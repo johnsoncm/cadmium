@@ -15,7 +15,17 @@ saveButton.on('click', function(){
 
 });
 
-//store ids in local storage and render on the page
+// function renderSavedEvents(){
+//     savedEventsContainer.innerHTML = '';
+// }
+
+//store ids in local storage in an array and render on the page
+
+//on page load check to see if there is a fav array - function 
+//and also runs everytime save button is clicked
+//make an end point where you can query array of ids
+//jquery to handle return data
+
 
 
 
