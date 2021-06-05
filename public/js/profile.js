@@ -1,32 +1,37 @@
 const addEventHandler = async (event) => {
   event.preventDefault();
-
-  const name = document.querySelector('#event-name').value.trim();
-  const date = document.querySelector('#date').value.trim();
+console.log("add event handler is running")
+  const title = document.querySelector('#event-name').value.trim();
+  const date = document.querySelector('#datepicker').value.trim();
   const time = document.querySelector('#time').value.trim();
-  const venue = document.querySelector('#venue').value.trim();
-  const venueAddress = document.querySelector('#venue-address').value.trim();
+  const locationName = document.querySelector('#venue').value.trim();
+  const locationAddress = document.querySelector('#venue-address').value.trim();
   const description = document.querySelector('#event-description').value.trim();
   const img = document.querySelector('#img').value.trim();
 
 // This isn't quite right - need to account for default img if user does not have one
+<<<<<<< HEAD
   if (name && date && time && venue && venueAddress && description && img) {
     const response = await fetch(`/api/newevent`, {
+=======
+  if (title && date && time && locationName && locationAddress && description && img) {
+    const response = await fetch('/api/events', {
+>>>>>>> fe96676a82fd4853ec0f6cc5c508dc3519c48eef
       method: 'POST',
       body: JSON.stringify({ 
-        name, 
+        title, 
         date,
         time,
-        venue,
-        venueAddress,
+        locationName,
+        locationAddress,
         description,
         img
       }),
-      headers: {
+          headers: {
         'Content-Type': 'application/json',
       },
     });
-
+console.log('response' , response)
     if (response.ok) {
       document.location.replace('/newevent');
     } else {
@@ -42,6 +47,14 @@ $(function () {
     changeYear: true,
   });
 });
+
+// Timepicker plugin
+$(function () {
+  $('#timepicker').timepicker({
+    timeFormat: 'h:mm p',
+  });
+});
+
 
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
@@ -62,7 +75,7 @@ const delButtonHandler = async (event) => {
 
 
 document
-  .querySelector('.new-event-form')
+  .querySelector('#new-event-form')
   .addEventListener('submit', addEventHandler);
 
 document
