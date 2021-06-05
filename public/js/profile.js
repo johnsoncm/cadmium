@@ -11,7 +11,7 @@ const addEventHandler = async (event) => {
 
 // This isn't quite right - need to account for default img if user does not have one
   if (name && date && time && venue && venueAddress && description && img) {
-    const response = await fetch(`/api/profile`, {
+    const response = await fetch(`/api/newevent`, {
       method: 'POST',
       body: JSON.stringify({ 
         name, 
@@ -28,7 +28,7 @@ const addEventHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/newevent');
     } else {
       alert('Failed to create profile');
     }
@@ -47,12 +47,12 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/profile/${id}`, {
+    const response = await fetch(`/api/newevent/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/newevent');
     } else {
       alert('Failed to delete profile');
     }
