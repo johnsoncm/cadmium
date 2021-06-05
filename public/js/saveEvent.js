@@ -1,10 +1,17 @@
-// This is not currently working, and probably not what we want for saving a "favorite" event.\/
+
 
 const saveButton = $(".save-btn");
 
 saveButton.on('click', function(){
+    let savedEvents = [];
     const saveId = $(this).data('id')
     console.log('im working', saveId);
+   
+    savedEvents.push(savedId);
+//     localStorage.setItem('save-btn' , JSON.stringify(savedEvents));
+// renderSavedEvents()
+// console.log(localStorage);
+
 
 });
 
