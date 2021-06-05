@@ -1,5 +1,18 @@
 // This is not currently working, and probably not what we want for saving a "favorite" event.\/
 
+const saveButton = $(".save-btn");
+
+saveButton.on('click', function(){
+    const saveId = $(this).data('id')
+    console.log('im working', saveId);
+
+});
+
+//store ids in local storage
+
+
+
+
 // let saveEvent;
 
 // if (window.location.pathname === 'homepage') {
