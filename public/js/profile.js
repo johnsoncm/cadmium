@@ -2,8 +2,8 @@ const addEventHandler = async (event) => {
   event.preventDefault();
 
   const name = document.querySelector('#event-name').value.trim();
-  const date = document.querySelector('#date').value.trim();
-  const time = document.querySelector('#time').value.trim();
+  const date = document.querySelector('#datepicker').value.trim();
+  const time = document.querySelector('#timepicker').value.trim();
   const venue = document.querySelector('#venue').value.trim();
   const venueAddress = document.querySelector('#venue-address').value.trim();
   const description = document.querySelector('#event-description').value.trim();
@@ -67,7 +67,6 @@ const delButtonHandler = async (event) => {
     }
   }
 };
-
 
 
 document
