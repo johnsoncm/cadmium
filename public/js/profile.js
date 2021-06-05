@@ -10,8 +10,9 @@ const addEventHandler = async (event) => {
   const img = document.querySelector('#img').value.trim();
 
 // This isn't quite right - need to account for default img if user does not have one
+
   if (title && date && time && locationName && locationAddress && description && img) {
-    const response = await fetch('/api/events', {
+    const response = await fetch('/api/newevent', {
       method: 'POST',
       body: JSON.stringify({ 
         title, 
