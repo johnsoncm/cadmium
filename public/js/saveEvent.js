@@ -8,7 +8,7 @@ saveButton.on('click', function(){
 
 });
 
-//store ids in local storage
+//store ids in local storage and render on the page
 
 
 
