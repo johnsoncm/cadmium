@@ -1,14 +1,31 @@
-// This is not currently working, and probably not what we want for saving a "favorite" event.\/
+
 
 const saveButton = $(".save-btn");
 
 saveButton.on('click', function(){
+    let savedEvents = [];
     const saveId = $(this).data('id')
     console.log('im working', saveId);
+   
+    savedEvents.push(savedId);
+//     localStorage.setItem('save-btn' , JSON.stringify(savedEvents));
+// renderSavedEvents()
+// console.log(localStorage);
+
 
 });
 
-//store ids in local storage and render on the page
+// function renderSavedEvents(){
+//     savedEventsContainer.innerHTML = '';
+// }
+
+//store ids in local storage in an array and render on the page
+
+//on page load check to see if there is a fav array - function 
+//and also runs everytime save button is clicked
+//make an end point where you can query array of ids
+//jquery to handle return data
+
 
 
 
