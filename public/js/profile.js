@@ -1,9 +1,9 @@
 const addEventHandler = async (event) => {
   event.preventDefault();
-console.log("add event handler is running")
+
   const title = document.querySelector('#event-name').value.trim();
   const date = document.querySelector('#datepicker').value.trim();
-  const time = document.querySelector('#time').value.trim();
+  const time = document.querySelector('#timepicker').value.trim();
   const locationName = document.querySelector('#venue').value.trim();
   const locationAddress = document.querySelector('#venue-address').value.trim();
   const description = document.querySelector('#event-description').value.trim();
@@ -13,6 +13,8 @@ console.log("add event handler is running")
 
   if (title && date && time && locationName && locationAddress && description && img) {
     const response = await fetch('/api/newevent', {
+
+
       method: 'POST',
       body: JSON.stringify({ 
         title, 
@@ -23,15 +25,16 @@ console.log("add event handler is running")
         description,
         img
       }),
-          headers: {
+      headers: {
         'Content-Type': 'application/json',
       },
     });
-console.log('response' , response)
+
     if (response.ok) {
       document.location.replace('/newevent');
     } else {
-      alert('Failed to create profile');
+      // alert('Error: Failed to create new event');
+      swal('Oops!', 'There was an error adding the event. Please try again', 'error');
     }
   }
 };
@@ -62,17 +65,19 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
+      // document.location.replace('/homepage');
       document.location.replace('/newevent');
     } else {
-      alert('Failed to delete profile');
+      // alert('Failed to delete event');
+      swal('Oops!', 'There was an error deleting the event. Please try again', 'error');
+
     }
   }
 };
 
 
-
 document
-  .querySelector('#new-event-form')
+  .querySelector('.new-event-form')
   .addEventListener('submit', addEventHandler);
 
 // document

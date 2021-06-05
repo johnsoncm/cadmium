@@ -1,8 +1,9 @@
 {{!-- We need to change this below to actually show the user's information --}}
 <div class="row">
   <div class="col-auto">
-    <div class="row"> <img src="./images/Untitled.png" class="logo"> </div>
-<h2>Welcome {{req.session.username}},</h2>
+    <div class="row"> <img src="./images/cadmiumCircle.png" class="logo"> </div>
+<h2>Welcome {{username}},</h2>
+
 <h2>Check out these upcoming Richmond Art Events!</h2>
 
 
@@ -40,6 +41,8 @@
       <div class="card-media-body-supporting-bottom card-media-body-supporting-bottom-reveal">
         <span class="card-media-body-supporting-bottom-text subtle"></span>
         <a href="#/" class="card-media-body-supporting-bottom-text card-media-link u-float-right">{{event.description}}</a>
+          <p>Special thanks to {{event.user.username}} for adding this event!</p>
+
       </div>
     </div>
   </div>

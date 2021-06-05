@@ -42,10 +42,12 @@ router.get('/homepage', async (req, res) => {
     // Serialize data so the template can read it
     const events = eventData.map((event) => event.get({ plain: true }));
     // Pass serialized data and session flag into template
+    const user = await User.findByPk(req.session.user_id);
     console.log("events", events);
     res.render('homepage', {
       events,
-      logged_in: req.session.logged_in
+      logged_in: req.session.logged_in,
+      username: user.username
     });
     
   } catch (err) {
