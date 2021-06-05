@@ -80,6 +80,6 @@ document
   .querySelector('.new-event-form')
   .addEventListener('submit', addEventHandler);
 
-document
-  .querySelector('.event-list')
-  .addEventListener('click', delButtonHandler);
+// document
+//   .querySelector('.event-list')
+//   .addEventListener('click', delButtonHandler);
