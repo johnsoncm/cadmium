@@ -1,3 +1,5 @@
+const sweetalert = require('sweetalert');
+
 console.log("hhey whats up")
 const loginFormHandler = async (event) => {
   event.preventDefault();
@@ -18,7 +20,10 @@ console.log("Hey there");
       // If successful, redirect the browser to the profile page
       document.location.replace('/homepage');
     } else {
-      alert(response.statusText);
+      // alert(response.statusText);
+      // swal(response.statusText);
+      // Not sure if we can do response.statusText with sweetalerts, so I'm giving us options to look into
+      swal('Oops!', 'There seems to be an error. Please try again', 'error');
     }
   }
 };
@@ -40,8 +45,8 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/homepage');
     } else {
-      alert(response.statusText);
-    }
+      // alert(response.statusText);
+      swal('Oops!', 'There seems to be an error. Please try again', 'error');    }
   }
 };
 

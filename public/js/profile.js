@@ -33,7 +33,8 @@ const addEventHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/newevent');
     } else {
-      alert('Error: Failed to create new event');
+      // alert('Error: Failed to create new event');
+      swal('Oops!', 'There was an error adding the event. Please try again', 'error');
     }
   }
 };
@@ -67,7 +68,9 @@ const delButtonHandler = async (event) => {
       // document.location.replace('/homepage');
       document.location.replace('/newevent');
     } else {
-      alert('Failed to delete event');
+      // alert('Failed to delete event');
+      swal('Oops!', 'There was an error deleting the event. Please try again', 'error');
+
     }
   }
 };
