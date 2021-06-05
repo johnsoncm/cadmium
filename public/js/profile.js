@@ -11,7 +11,7 @@ const addEventHandler = async (event) => {
 
 // This isn't quite right - need to account for default img if user does not have one
   if (name && date && time && venue && venueAddress && description && img) {
-    const response = await fetch(`/api/profile`, {
+    const response = await fetch(`/api/events`, {
       method: 'POST',
       body: JSON.stringify({ 
         name, 
@@ -28,9 +28,9 @@ const addEventHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/homepage');
     } else {
-      alert('Failed to create profile');
+      alert('Error: Failed to create new event');
     }
   }
 };
@@ -47,6 +47,7 @@ $(function () {
 $(function () {
   $('#timepicker').timepicker({
     timeFormat: 'h:mm p',
+    interval: 15
   });
 });
 
@@ -60,9 +61,9 @@ const delButtonHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/homepage');
     } else {
-      alert('Failed to delete profile');
+      alert('Failed to delete event');
     }
   }
 };
