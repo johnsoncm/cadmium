@@ -1,3 +1,9 @@
+//store ids in local storage in an array and render on the page
+
+//on page load check to see if there is a fav array - function 
+//and also runs everytime save button is clicked
+//make an end point where you can query array of ids
+//jquery to handle return data
 
 
 const saveButton = $(".save-btn");
@@ -6,17 +12,18 @@ saveButton.on('click', function(){
     let savedEvents = [];
     const saveId = $(this).data('id')
     console.log('im working', saveId);
+    console.log("what is this:",this)
    
-    savedEvents.push(savedId);
+    savedEvents.push(saveId);
     localStorage.setItem('save-btn' , JSON.stringify(savedEvents));
-renderSavedEvents()
+// renderSavedEvents()
 console.log(localStorage);
 
 
 });
 
 // const getEvents = () => 
-//     fetch ('/api/savedevents' , {
+//     fetch ('/api/:id' , {
 //         method: 'GET',
 //         headers: {
 //             'Content-Type': 'application/json',
@@ -40,12 +47,6 @@ console.log(localStorage);
 //     savedEventsContainer.innerHTML = '';
 // }
 
-//store ids in local storage in an array and render on the page
-
-//on page load check to see if there is a fav array - function 
-//and also runs everytime save button is clicked
-//make an end point where you can query array of ids
-//jquery to handle return data
 
 
 
