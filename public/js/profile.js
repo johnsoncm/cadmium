@@ -1,3 +1,5 @@
+const { default: swal } = require("sweetalert");
+
 const addEventHandler = async (event) => {
   event.preventDefault();
 
@@ -10,11 +12,10 @@ const addEventHandler = async (event) => {
   const img = document.querySelector('#img').value.trim();
 
 // This isn't quite right - need to account for default img if user does not have one
-
   if (title && date && time && locationName && locationAddress && description && img) {
-    const response = await fetch('/api/newevent', {
+    // const response = await fetch('/api/newevent', {
 
-
+    const response = await fetch('/api/events', {
       method: 'POST',
       body: JSON.stringify({ 
         title, 
@@ -29,12 +30,17 @@ const addEventHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
+    consosle.log(response);
 
     if (response.ok) {
-      document.location.replace('/newevent');
+      // or do we want to redirect to homepage
+      // document.location.replace('/newevent');
+
+      document.location.replace('/homepage');
+      swal('Sucess!', 'Your event has been created', 'success');
     } else {
       // alert('Error: Failed to create new event');
-      swal('Oops!', 'There was an error adding the event. Please try again', 'error');
+      swal('Oops!', 'There was an error adding the event. Please try again.', 'error');
     }
   }
 };
@@ -56,24 +62,24 @@ $(function () {
 });
 
 
-const delButtonHandler = async (event) => {
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
+// const delButtonHandler = async (event) => {
+//   if (event.target.hasAttribute('data-id')) {
+//     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/newevent/${id}`, {
-      method: 'DELETE',
-    });
+//     const response = await fetch(`/api/newevent/${id}`, {
+//       method: 'DELETE',
+//     });
 
-    if (response.ok) {
-      // document.location.replace('/homepage');
-      document.location.replace('/newevent');
-    } else {
-      // alert('Failed to delete event');
-      swal('Oops!', 'There was an error deleting the event. Please try again', 'error');
+//     if (response.ok) {
+//       // document.location.replace('/homepage');
+//       document.location.replace('/newevent');
+//     } else {
+//       // alert('Failed to delete event');
+//       swal('Oops!', 'There was an error deleting the event. Please try again', 'error');
 
-    }
-  }
-};
+//     }
+//   }
+// };
 
 
 document
