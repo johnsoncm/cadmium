@@ -8,12 +8,33 @@ saveButton.on('click', function(){
     console.log('im working', saveId);
    
     savedEvents.push(savedId);
-//     localStorage.setItem('save-btn' , JSON.stringify(savedEvents));
-// renderSavedEvents()
-// console.log(localStorage);
+    localStorage.setItem('save-btn' , JSON.stringify(savedEvents));
+renderSavedEvents()
+console.log(localStorage);
 
 
 });
+
+// const getEvents = () => 
+//     fetch ('/api/savedevents' , {
+//         method: 'GET',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//     });
+
+//     const savedEvent = (event) =>
+//     fetch('/api/events', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(event)
+//     });
+
+//     const renderSavedEvents = () => {
+//         event.title
+//     }
 
 // function renderSavedEvents(){
 //     savedEventsContainer.innerHTML = '';
