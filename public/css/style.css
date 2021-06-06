@@ -48,6 +48,7 @@ body {
 
 
 
+
 .twitter {
     background-color: #1DA1F2;
     color: #fff;
@@ -111,6 +112,15 @@ text-align: center;
 .landing-page-text {
     font-family: 'Anton', 'sans-serif'
 }
+
+.font-headings, .form, .para-text {
+    font-family: 'Anton', 'sans-serif';
+    font-size: x-large;
+}
+.para-font {
+    font-size: small;
+}
+
 
 .btn-primary{
     font-family:'Staatliches';
@@ -191,6 +201,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
   }
 
   mark {
@@ -199,4 +210,3 @@ body {
   }
 
 
-  
