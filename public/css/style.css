@@ -48,6 +48,7 @@ body {
 
 
 
+
 .twitter {
     background-color: #1DA1F2;
     color: #fff;
@@ -101,6 +102,31 @@ body {
     color: #BDBDBD;
     font-weight: 300
 }
+.art-event-text {
+/* background-color: #cdd2d5; */
+text-align: center;
+
+}
+
+
+.landing-page-text {
+    font-family: 'Anton', 'sans-serif'
+}
+
+.font-headings, .form, .para-text {
+    font-family: 'Anton', 'sans-serif';
+    font-size: x-large;
+}
+.para-font {
+    font-size: small;
+}
+
+
+.btn-primary{
+    font-family:'Staatliches';
+    color: black;
+    font-size: x-large;
+}
 
 input,
 textarea {
@@ -142,6 +168,8 @@ button:focus {
   font-size: 100%;
 } */
 
+
+
 .logout-btn:hover {
   color: #065b83;
   text-decoration: underline;
@@ -173,9 +201,12 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-repeat: no-repeat;
   }
 
   mark {
     background-color: #e30022;
     color:black
   }
+
+
