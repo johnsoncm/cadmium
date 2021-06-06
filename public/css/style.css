@@ -101,6 +101,11 @@ body {
     color: #BDBDBD;
     font-weight: 300
 }
+.art-event-text {
+/* background-color: #cdd2d5; */
+text-align: center;
+
+}
 
 input,
 textarea {
@@ -142,6 +147,8 @@ button:focus {
   font-size: 100%;
 } */
 
+
+
 .logout-btn:hover {
   color: #065b83;
   text-decoration: underline;
@@ -179,3 +186,6 @@ body {
     background-color: #e30022;
     color:black
   }
+
+
+  
