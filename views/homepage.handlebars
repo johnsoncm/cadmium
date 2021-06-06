@@ -2,9 +2,9 @@
 <div class="row">
   <div class="col-auto">
     <div class="row"> <img src="./images/cadmiumCircle.png" class="logo"> </div>
-<h2>Welcome {{username}},</h2>
+<h2 class="font-headings">Welcome {{username}},</h2>
 
-<h2>Check out these upcoming Richmond Art Events!</h2>
+<h2 class="font-headings">Check out these upcoming Richmond Art Events!</h2>
 
 
 {{#each events as |event| }}
@@ -13,7 +13,9 @@
   <div class="card-media">
     <!-- media container -->
     <div class="card-media-object-container">
+      <a href="{{event.link}}" target="_blank">
       <div class="card-media-object" style="background-image: url({{event.img}});"></div>
+      </a>
 
     </div>
     <!-- body container -->
@@ -33,7 +35,12 @@
 
         </div>
       </div>
+      <div>
       <span class="card-media-body-heading">{{event.title}}</span>
+  
+       
+      
+      </div>
       <div class="card-media-body-supporting-bottom">
         <span class="card-media-body-supporting-bottom-text subtle">{{event.locationName}}</span>
         <span class="card-media-body-supporting-bottom-text subtle u-float-right">{{event.locationAddress}}</span>
