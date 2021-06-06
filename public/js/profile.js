@@ -83,7 +83,7 @@ $(function () {
 
 
 document
-  .querySelector('.new-event-form')
+  .querySelector('#new-event-form')
   .addEventListener('submit', addEventHandler);
 
 // document
