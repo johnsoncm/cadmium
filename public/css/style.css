@@ -107,6 +107,17 @@ text-align: center;
 
 }
 
+
+.landing-page-text {
+    font-family: 'Anton', 'sans-serif'
+}
+
+.btn-primary{
+    font-family:'Staatliches';
+    color: black;
+    font-size: x-large;
+}
+
 input,
 textarea {
     padding: 10px 12px 10px 12px;
