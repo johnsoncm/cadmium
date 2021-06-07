@@ -14,8 +14,8 @@ console.log(title, date, time, locationName, locationAddress, description, img, 
 // This isn't quite right - need to account for default img if user does not have one
 
   if (title && date && time && locationName && locationAddress && description && img && link) {
-    // console.log(title, date, time, locationName, locationAddress, description, img, link)
-    // console.log('R U WORKING')
+    console.log(title, date, time, locationName, locationAddress, description, img, link)
+    console.log('R U WORKING')
     const response = await fetch('/newevent', {
      
 
@@ -34,11 +34,11 @@ console.log(title, date, time, locationName, locationAddress, description, img, 
         'Content-Type': 'application/json',
       },
     });
-    console.log(response);
+     console.log(response);
     console.log(title, date, time, locationName, locationAddress, description, img, link)
 console.log('response' , response)
     if (response.ok) {
-      document.location.replace('/homepage');
+      document.location.replace('/newevent');
     } else {
       // alert('Error: Failed to create new event');
       swal('Oops!', 'There was an error adding the event. Please try again', 'error');
