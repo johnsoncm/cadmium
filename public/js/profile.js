@@ -50,16 +50,17 @@ console.log('response' , response)
 // Datepicker widget
 $(function () {
   $('#datepicker').datepicker({
-    changeMonth: true,
-    changeYear: true,
+   dateFormat: 'yy-mm-dd'
+    // changeMonth: true,
+    // changeYear: true,
   });
 });
 
 // Timepicker plugin
 $(function () {
   $('#timepicker').timepicker({
-    timeFormat: 'h:mm p',
-    interval: 15
+    timeFormat: 'hh:mm:ss',
+    interval: 30
   });
 });
 
