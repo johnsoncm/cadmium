@@ -1,17 +1,19 @@
 const addEventHandler = async (event) => {
   event.preventDefault();
-
+console.log('add event handler is running')
   const title = document.querySelector('#event-name').value.trim();
   const date = document.querySelector('#datepicker').value.trim();
   const time = document.querySelector('#timepicker').value.trim();
   const locationName = document.querySelector('#venue').value.trim();
   const locationAddress = document.querySelector('#venue-address').value.trim();
   const description = document.querySelector('#event-description').value.trim();
-  const img = document.querySelector('#img').value.trim();
+  const img = document.querySelector('#img');
+  const link = document.querySelector('#event-link').value.trim();
+  
 
 // This isn't quite right - need to account for default img if user does not have one
 
-  if (title && date && time && locationName && locationAddress && description && img) {
+  if (title && date && time && locationName && locationAddress && description && img && link) {
     const response = await fetch('/api/newevent', {
 
 
@@ -23,21 +25,23 @@ const addEventHandler = async (event) => {
         locationName,
         locationAddress,
         description,
-        img
+        img,
+        link
       }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
-
+console.log('response' , response)
     if (response.ok) {
-      document.location.replace('/newevent');
+      document.location.replace('/homepage');
     } else {
       // alert('Error: Failed to create new event');
       swal('Oops!', 'There was an error adding the event. Please try again', 'error');
     }
   }
 };
+
 
 // Datepicker widget
 $(function () {
@@ -77,7 +81,7 @@ const delButtonHandler = async (event) => {
 
 
 document
-  .querySelector('.new-event-form')
+  .querySelector('#new-event-form')
   .addEventListener('submit', addEventHandler);
 
 // document
