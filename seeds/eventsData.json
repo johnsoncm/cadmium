@@ -7,7 +7,7 @@
     "locationAddress": "1514 West Main Street",
     "description": "Painting and Prints",
     "time": 430,
-    "link": "https://www.google.com"
+    "link": "https://www.reynoldsgallery.com/"
 
   },
   {
@@ -18,7 +18,7 @@
     "locationAddress": "214 East Grace Street",
     "description": "Paintings",
     "time": 600,
-    "link":  "https://www.google.com"
+    "link":  "https://edenairlines.com/"
 
 
   },
@@ -30,7 +30,7 @@
     "locationAddress": "200 North Arthur Ashe Boulevard",
     "description": "Mixed Media",
     "time": 430,
-    "link":  "https://www.google.com"
+    "link":  "https://www.vmfa.museum"
 
   },
   {
@@ -41,7 +41,7 @@
     "locationAddress": "319 West Broad Street",
     "description": "Mixed Media",
     "time": 1900,
-    "link": "https://www.google.com"
+    "link": "https://1708gallery.org/"
 
   },
   {
@@ -52,7 +52,7 @@
     "locationAddress": "214 West Broad Street",
     "description": "Mixed Media",
     "time": 1430,
-    "link":  "https://www.google.com"
+    "link":  "https://www.candelagallery.com/"
 
   },
   {
@@ -63,7 +63,7 @@
     "locationAddress": "321 West Broad Street",
     "description": "Photography",
     "time": 1930,
-    "link":  "https://www.google.com"
+    "link":  "http://www.321westbroad.com/"
 
   },
   {
@@ -74,7 +74,7 @@
     "locationAddress": "2305 East Broad Street",
     "description": "Painting",
     "time": 430,
-    "link":  "https://www.google.com"
+    "link":  "https://www.ericschindlergallery.com/news-exhibitions"
 
   },
   {
@@ -85,7 +85,7 @@
     "locationAddress": "601 West Broad Street",
     "description": "Artist Talk",
     "time": 600,
-    "link":  "https://www.google.com"
+    "link":  "https://icavcu.org/exhibition/"
 
   },
   {
@@ -95,8 +95,8 @@
     "locationName": "Quirk Gallery",
     "locationAddress": "207 West Broad Street",
     "description": "Ceramics ",
-    "time": 430,
-    "link":  "https://www.google.com"
+   "time": 430,
+    "link":  "https://www.quirkgallery.com/exhibitions"
 
   }
   ]
