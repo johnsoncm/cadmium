@@ -1,6 +1,6 @@
 const addEventHandler = async (event) => {
   event.preventDefault();
-console.log('add event handler is running')
+console.log('add event handler is running', event)
   const title = document.querySelector('#event-name').value.trim();
   const date = document.querySelector('#datepicker').value.trim();
   const time = document.querySelector('#timepicker').value.trim();
@@ -10,12 +10,14 @@ console.log('add event handler is running')
   const img = document.querySelector('#img');
   const link = document.querySelector('#event-link').value.trim();
   
-
+console.log(title, date, time, locationName, locationAddress, description, img, link)
 // This isn't quite right - need to account for default img if user does not have one
 
   if (title && date && time && locationName && locationAddress && description && img && link) {
-    const response = await fetch('/api/newevent', {
-
+    // console.log(title, date, time, locationName, locationAddress, description, img, link)
+    // console.log('R U WORKING')
+    const response = await fetch('/newevent', {
+     
 
       method: 'POST',
       body: JSON.stringify({ 
@@ -32,6 +34,8 @@ console.log('add event handler is running')
         'Content-Type': 'application/json',
       },
     });
+    console.log(response);
+    console.log(title, date, time, locationName, locationAddress, description, img, link)
 console.log('response' , response)
     if (response.ok) {
       document.location.replace('/homepage');
