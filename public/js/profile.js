@@ -7,7 +7,7 @@ console.log('add event handler is running', event)
   const locationName = document.querySelector('#venue').value.trim();
   const locationAddress = document.querySelector('#venue-address').value.trim();
   const description = document.querySelector('#event-description').value.trim();
-  const img = document.querySelector('#img');
+  const img = document.querySelector('#img').value.trim();
   const link = document.querySelector('#event-link').value.trim();
   
 console.log(title, date, time, locationName, locationAddress, description, img, link)
@@ -16,7 +16,7 @@ console.log(title, date, time, locationName, locationAddress, description, img, 
   if (title && date && time && locationName && locationAddress && description && img && link) {
     console.log(title, date, time, locationName, locationAddress, description, img, link)
     console.log('R U WORKING')
-    const response = await fetch('/newevent', {
+    const response = await fetch('/api/events', {
      
 
       method: 'POST',
@@ -38,7 +38,7 @@ console.log(title, date, time, locationName, locationAddress, description, img, 
     console.log(title, date, time, locationName, locationAddress, description, img, link)
 console.log('response' , response)
     if (response.ok) {
-      document.location.replace('/newevent');
+      document.location.replace('/homepage');
     } else {
       // alert('Error: Failed to create new event');
       swal('Oops!', 'There was an error adding the event. Please try again', 'error');
