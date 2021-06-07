@@ -82,6 +82,7 @@ router.get('/events/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/newevent', withAuth, async (req, res) => {
   try {
+    console.log('this route is hitting')
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
