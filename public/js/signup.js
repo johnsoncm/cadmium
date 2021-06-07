@@ -29,7 +29,9 @@ const signupForm = async (event) => {
         } else {
             // alert(response.statusText);
             console.log('bad');
-            alert('Please enter a valid username, email, and password');
+            // alert('Please enter a valid username, email, and password');
+            swal('Error!', 'Please enter a valid username, email, and passowrd', 'Password must be at least 8 characters', 'error');
+
         }
         // add try catch - for creating error
     }

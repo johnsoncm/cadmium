@@ -6,7 +6,8 @@
     "locationName": "Reynolds Gallery",
     "locationAddress": "1514 West Main Street",
     "description": "Painting and Prints",
-    "time": 430
+    "time": 430,
+    "link": "https://www.reynoldsgallery.com/"
 
   },
   {
@@ -16,7 +17,9 @@
     "locationName": "Eden Airlines",
     "locationAddress": "214 East Grace Street",
     "description": "Paintings",
-    "time": 600
+    "time": 600,
+    "link":  "https://edenairlines.com/"
+
 
   },
   {
@@ -26,7 +29,8 @@
     "locationName": "Virginia Museum of Fine Art",
     "locationAddress": "200 North Arthur Ashe Boulevard",
     "description": "Mixed Media",
-    "time": 430
+    "time": 430,
+    "link":  "https://www.vmfa.museum"
 
   },
   {
@@ -36,7 +40,8 @@
     "locationName": "1708 Gallery",
     "locationAddress": "319 West Broad Street",
     "description": "Mixed Media",
-    "time": 1900
+    "time": 1900,
+    "link": "https://1708gallery.org/"
 
   },
   {
@@ -46,7 +51,8 @@
     "locationName": "Candela Gallery",
     "locationAddress": "214 West Broad Street",
     "description": "Mixed Media",
-    "time": 1430
+    "time": 1430,
+    "link":  "https://www.candelagallery.com/"
 
   },
   {
@@ -56,7 +62,8 @@
     "locationName": "Black Iris Gallery",
     "locationAddress": "321 West Broad Street",
     "description": "Photography",
-    "time": 1930
+    "time": 1930,
+    "link":  "http://www.321westbroad.com/"
 
   },
   {
@@ -66,7 +73,8 @@
     "locationName": "Eric Schindler Gallery",
     "locationAddress": "2305 East Broad Street",
     "description": "Painting",
-    "time": 430
+    "time": 430,
+    "link":  "https://www.ericschindlergallery.com/news-exhibitions"
 
   },
   {
@@ -76,7 +84,8 @@
     "locationName": "Institute for Contemporary Art",
     "locationAddress": "601 West Broad Street",
     "description": "Artist Talk",
-    "time": 600
+    "time": 600,
+    "link":  "https://icavcu.org/exhibition/"
 
   },
   {
@@ -86,7 +95,8 @@
     "locationName": "Quirk Gallery",
     "locationAddress": "207 West Broad Street",
     "description": "Ceramics ",
-    "time": 430
+   "time": 430,
+    "link":  "https://www.quirkgallery.com/exhibitions"
 
   }
   ]

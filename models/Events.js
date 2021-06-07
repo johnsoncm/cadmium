@@ -38,8 +38,12 @@ Events.init(
         },
         img: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
         },
+        link: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        }
   },
   {
     sequelize,

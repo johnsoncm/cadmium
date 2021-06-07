@@ -1,30 +1,31 @@
 <div class="row">
   <div class="col-auto">
-    <h2>Welcome, {{user.username}}!</h2>
+    <div class="row"> <img src="./images/cadmiumCircle.png" class="logo"> </div>
+
+    <h2 class="art-event-text">Add An Art Event!</h2>
   </div>
 </div>
 ​
 <div class="row mt-4">
   <div class="col-md-6">
-    <h3>Found a new art event? Share that information here so others can learn about it too!</h3>
+    <h3 class="art-event-text">Found a new art event? Share that information here so others can learn about it too!</h3>
     ​
-    <form class="form new-event-form">
+    <form class="form new-event-form" id="new-event-form">
       <div class="form-group">
         <label for="event-name">Event Name:</label>
         <input class="form-input" type="text" id="event-name" name="event-name" />
       </div>
 
-<!--Jquey date picker-->
+      <!--Jquey date picker-->
       <div class="form-group row">
         <label for="date" class="col-sm-4 col-form-label">Date: </label>
         <div class="col-sm-8">
-          <input type="text" class="form-control" id="datepicker" autocomplete="off" />
+          <input type="text" class="form-control" id="datepicker" id='date' autocomplete="off" />
         </div>
       </div>
-
       <div class="form-group">
         <label for="time">Time:</label>
-        <input class="form-input" type="number" id="time" name="time" />
+        <input class="form-input" type="text" id="timepicker" id='time' name="time" />
       </div>
       <div class="form-group">
         <label for="venue">Venue:</label>
@@ -40,9 +41,15 @@
       </div>
       <div class="form-group">
         <label for="event-description">Image Link:</label>
-        <p>Feel free to add an image link if you have one</p>
-        <textarea class="form-input" type="text" id="img" name="img"></textarea>
+        <p>If you would like to include an image please add the link here:</p>
+        <textarea class="form-input"  type="text" id="img" name="img"></textarea>
       </div>
+      <div class="form-group">
+        <label for="event-description">Event Link:</label>
+        <p>If you would like to include a link to the gallery, please add it here:</p>
+        <textarea class="form-input" type="text" id="event-link" name="img"></textarea>
+      </div>
+
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Add</button>
       </div>
@@ -50,9 +57,9 @@
   </div>
   ​
   {{#if events.length}}
-  <div class="col-md-6 project-list">
+  <div class="col-md-6 event-list">
     <h3>Current Events:</h3>
-    {{#each event as |event|}}
+    {{#each events as |event|}}
     <div class="row mb-2">
       <div class="col-md-8">
         <h4><a href="/events/{{event.id}}">{{event.name}}</a></h4>
