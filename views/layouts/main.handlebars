@@ -6,12 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cadmium: Art Events in Richmond, VA!</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+  {{!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"> --}}
+   <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+  {{!-- <script src="//code.jquery.com/jquery-1.12.4.js"></script> --}}
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans+Condensed:wght@700&family=Staatliches&display=swap" rel="stylesheet">
-  <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  {{!-- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> --}}
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/eventCard.css">
@@ -67,9 +71,14 @@
   <script src="/js/logout.js"></script>
   {{/if}}
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
-{{!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+{{!-- moved script tags to just before closing body tag --}}
+{{!-- <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> --}}
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <!-- jQuery UI <script> tag -->
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> --}}
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+
 </body>
 </html>

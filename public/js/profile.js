@@ -1,7 +1,8 @@
-const { default: swal } = require("sweetalert");
+// const sweetalert = require("sweetalert");
 
 const addEventHandler = async (event) => {
   event.preventDefault();
+  console.log('testing event form');
 
   const title = document.querySelector('#event-name').value.trim();
   const date = document.querySelector('#datepicker').value.trim();
@@ -30,7 +31,7 @@ const addEventHandler = async (event) => {
         'Content-Type': 'application/json',
       },
     });
-    consosle.log(response);
+    consosle.log('response', response);
 
     if (response.ok) {
       // or do we want to redirect to homepage
