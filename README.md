@@ -99,10 +99,20 @@ The following photos provide a mock-up of the application:
 ![Homepage shows all events on database](./public/images/homepage-2.png)
 5. Add event page
 ![Add event page prompts user to add event title, date, time, location name, location address, and gives the option to add an image link and an event link](./public/images/add-event-page.png)
+
+## Github link
+
 The following link leads to the GitHub repository for this app:
-![GitHub Link](https://github.com/johnsoncm/cadmium)
+[GitHub Link](https://github.com/johnsoncm/cadmium)
+
+
+## Heroku Link
+
 The following link leads to the deployed application on Heroku:
-![Heroku Link](_____________)
+
+[Heroku Link](https://ancient-lowlands-14789.herokuapp.com/login)
+
+
 ## Usage
 To run the app locally, follow these steps:
 1. Install the necessary dependencies. Navigate to the repository's root directory and run the following: 
