@@ -1,12 +1,12 @@
 # Cadmium
 
-
 ## Description
 
-This applicaiton presents the user with listings by date of art events happening in Richmond, VA. They will be able to add to their own personal list and either print, email, or plot on a map. The user will also be able to create their own event postings, but they will be required to login or create a profile before doing so.
+This applicaiton presents the user with listings by date of art events happening in Richmond, VA. The user will be able to create their own event postings, but they will be required to login or create an account before doing so. In future developments of Cadmium, they will be able to add to their own personal list and either print, email, or plot on a map. 
 
 
 ## Table of Contents
+
 1. [Technologies Used](#Technologies-Used)
 2. [User Story](#User-Story)
 3. [Acceptance Criteria](#Acceptance-Criteria)
@@ -15,7 +15,6 @@ This applicaiton presents the user with listings by date of art events happening
 6. [Usage](#Usage)
 7. [Contact](#Contact)
 8. [License](#License)
-
 
 ## Technologies Used
 ```
@@ -32,11 +31,10 @@ This applicaiton presents the user with listings by date of art events happening
 11. Handlebars
 12. GET & POST API routes to add/retrieve data
 13. MVC structure
-14. ______whatever the new tech is
+14. Sweetalerts (new technology)
 ```
 
 ## User Story
-
 ```md
 AS AN art enthusiast in Richmond, Va 
 I WANT to find upcoming art events 
@@ -44,34 +42,30 @@ SO THAT I can plan out when/where they’re happening.
 ```
 
 ## Acceptance Criteria
-
 ```md
 GIVEN a CMS-style art events site:
 WHEN I visit the site for the first time,
 THEN I am presented with the landing page, which presents me with the options to login or create an account.
 WHEN I choose to create an account,
 THEN I am prompted to create a username and password and enter an email address.
-WHEN I click on the sign-up button,
+WHEN I click on the login button,
 THEN my user credentials are saved and I am logged into the site.
 WHEN I revisit the site at a later time and choose to sign in,
 THEN I am prompted to enter my username and password.
 WHEN I am signed in to the site,
-THEN I see navigation links for the homepage, the profile page, and the option to log out.
+THEN I see navigation links for the homepage, the add event page, and the logout button.
 WHEN I click on the homepage option in the navigation,
-THEN I am taken to the homepage and presented with existing art events that include the event title, date, time, venue name, venue address, brief description, and potentially an image related to the specific event.
-WHEN I click on the profile option in the navigation,
-THEN I am taken to the profile page and presented with any events I have already saved and the option to add a new event.
-WHEN I click on the button to add a new a new art event,
-THEN I am prompted to enter the event title, date, time, venue name, venue address, brief description, and an image link related to the specific event (if I have one).
+THEN I am taken to the homepage and presented with existing art events that include the event title, date, time, venue name, venue address, brief description, potentially an image related to the specific event, and potentially a link to the event.
+WHEN I click on the create an event option in the navigation,
+THEN I am taken to the add event page and presented with the option to add a new event.
+WHEN I click on the button to add a new art event,
+THEN I am prompted to enter the event title, date, time, venue name, venue address, brief description,  an image link related to the specific event (if I have one), and a link to the event (if I have one).
 WHEN I click on the button to create a new event,
-THEN the event title, date, time, venue name, venue address, brief description, and an image link related to the specific event (if I have one) are saved and I am taken back to an updated profile with my new event.
-WHEN I click on one of my existing events in the profile,
-THEN I am able to delete or update my event and am taken back to an updated profile.
+THEN the event title, date, time, venue name, venue address, brief description, and respective links are saved, and I am taken back to the homepage with my new event added at the bottom of the list.
 WHEN I click on the logout option in the navigation,
 THEN I am signed out of the site.
 WHEN I am idle on the site for more than a set time,
 THEN I am prompted to log in again before I can view events.
-iew comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 
 ## Application Requirements
@@ -92,18 +86,28 @@ iew comments but I am prompted to log in again before I can add, update, or dele
 ```
 
 ## Mock-Up
-The following __photos/videos/animations____ demonstrate(s) the funcitonality of the application: [Description_______](link______)
 
+The following photos provide a mock-up of the application: 
+1. Landing Page
+![Landing page prompts user to login or signup](./public/images/landing-page.png)
+2. Login Page
+![Login page prompts return users to enter their email and password associated with the account ](./public/images/login-page.png)
+3. Signup Page
+![Signup page prompts user to login or signup](./public/images/signup-page.png)
+4. Homepage
+![Homepage shows navigation bar and all events on database](./public/images/homepage-1.png)
+![Homepage shows all events on database](./public/images/homepage-2.png)
+5. Add event page
+![Add event page prompts user to add event title, date, time, location name, location address, and gives the option to add an image link and an event link](./public/images/add-event-page.png)
 The following link leads to the GitHub repository for this app:
 ![GitHub Link](https://github.com/johnsoncm/cadmium)
-
 The following link leads to the deployed application on Heroku:
 ![Heroku Link](_____________)
-
 ## Usage
 To run the app locally, follow these steps:
 1. Install the necessary dependencies. Navigate to the repository's root directory and run the following: 
-```npm install
+```
+npm install
 ```
 2. Create a .env file in the root directory. It should contain the following information:
 ```
@@ -124,21 +128,15 @@ node seeds/node
 ```
 npm start
 ```
-
 ## Contact
 If you have any questions about the repo, contact the following contributors:
 * [Casey Johnson](https://github.com/johnsoncm)
 * [Seth Vance](https://github.com/sethvance26)
 * [Erick McNeil](https://github.com/ErickMcNeil)
 * [Catherine Smith](https://github.com/crsmith01)
-
-
 ## License
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 Copyright 2021 Cadmium
-
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
