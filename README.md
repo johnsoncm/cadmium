@@ -2,7 +2,7 @@
 
 ## Description
 
-This applicaiton presents the user with listings by date of art events happening in Richmond, VA. The user will be able to create their own event postings, but they will be required to login or create an account before doing so. In future developments of Cadmium, they will be able to add to their own personal list and either print, email, or plot on a map. 
+This application presents the user with listings by date of art events happening in Richmond, VA. The user will be able to create their own event postings, but they will be required to login or create an account before doing so. In future developments of Cadmium, they will be able to add to their own personal list and either print, email, or plot on a map. 
 
 
 ## Table of Contents
